@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BUFYMA - Restaurant Local</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px 40px;
+    background: #fff8f0;
+    color: #4a4a4a;
+  }
+  header {
+    background-color: #d35400;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header img {
+    max-height: 60px;
+    vertical-align: middle;
+  }
+  nav {
+    margin-top: 15px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  section {
+    margin-top: 30px;
+  }
+  h1, h2 {
+    color: #d35400;
+  }
+  button {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  button:hover {
+    background-color: #e67e22;
+  }
+  .menu-item {
+    display: flex;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #ddd;
+    padding: 15px;
+  }
+  .menu-item img {
+    max-width: 160px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  .menu-desc {
+    flex-grow: 1;
+  }
+  .menu-desc h3 {
+    margin: 0 0 10px 0;
+    color: #d35400;
+  }
+  .price {
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 10px;
+  }
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #ddd;
+  }
+  label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  footer {
+    background: #d35400;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .menu-item {
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-item img {
+      margin-bottom: 12px;
+      max-width: 100%;
+    }
+    nav a {
+      display: block;
+      margin: 8px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Logo Bufyma" />
+  <h1>BUFYMA</h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#inscription">S'inscrire</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="accueil">
+  <h2>JE VOUS SOUHAITE LA BIENVENUE</h2>
+  <p>Découvrez nos plats locaux et savoureux, préparés avec amour pour vous faire voyager au cœur des saveurs du Bénin.</p>
+  <button onclick="location.href='#inscription'">S’inscrire</button>
+</section>
+
+<section id="menu">
+  <h2>Menu des Plats Locaux & Shawarma</h2>
+
+  <!-- Entrées -->
+  <h3>Entrées</h3>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Akassa_Benin.JPG/320px-Akassa_Benin.JPG" alt="Akassa" />
+    <div class="menu-desc">
+      <h3>Akassa</h3>
+      <p>Spécialité à base de maïs fermenté accompagnée de sauce pimentée.</p>
+      <div class="price">1200 FCFA</div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Bénin_poulet_d_akassa.jpg" alt="Poulet Akassa" />
+    <div class="menu-desc">
+      <h3>Poulet Akassa</h3>
+      <p>Akassa servi avec du poulet épicé.</p>
+      <div class="price">1800 FCFA</div>
+    </div>
+  </div>
+
+  <!-- Plats -->
+  <h3>Plats</h3>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Food_Benin_06.jpg" alt="Fufu" />
+    <div class="menu-desc">
+      <h3>Fufu</h3>
+      <p>Pâte de manioc ou d’igname accompagnée d’une sauce épicée.</p>
+      <div class="price">1500 FCFA</div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Shawarma_in_Benin_01.jpg" alt="Shawarma" />
+    <div class="menu-desc">
+      <h3>Shawarma</h3>
+      <p>Sandwich garni de viande, légumes frais, et sauce spéciale.</p>
+      <div class="price">1000 FCFA</div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Afissa_Benin.jpg" alt="Afissa" />
+    <div class="menu-desc">
+      <h3>Afissa</h3>
+      <p>Ragoût d’arachides avec viande et légumes frais.</p>
+      <div class="price">2000 FCFA</div>
+    </div>
+  </div>
+
+  <!-- Desserts -->
+  <h3>Desserts</h3>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Beignets_beninois_au_ma%C3%AFs.jpg" alt="Beignets Béninois" />
+    <div class="menu-desc">
+      <h3>Beignets Béninois</h3>
+      <p>Délicieux beignets sucrés, spécialité locale.</p>
+      <div class="price">500 FCFA</div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Banana_Fritters.JPG" alt="Gâteaux de banane" />
+    <div class="menu-desc">
+      <h3>Gâteaux de banane</h3>
+      <p>Gâteaux frits à base de banane mûre.</p>
+      <div class="price">600 FCFA</div>
+    </div>
+  </div>
+</section>
+
+<section id="inscription">
+  <h2>Inscription</h2>
+  <form id="inscriptionForm" action="#" method="post">
+    <label for="nom">Nom complet *</label>
+    <input type="text" id="nom" name="nom" required />
+
+    <label for="email">Adresse Email *</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="tel">Téléphone</label>
+    <input type="tel" id="tel" name="tel" />
+
+    <label for="password">Mot de passe *</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">S'inscrire</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Adresse :</strong> AVOTROU, Cotonou, Bénin</p>
+  <p><strong>Téléphone :</strong> +229 65 75 16 27</p>
+  <p><strong>Horaires :</strong> Ouvert 24h/24</p>
+  
+  <h3>Localisation</h3>
+  <!-- Intégration Google Maps -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.524896402114!2d2.420215415103269!3d6.367023924517965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1022a4e66053d909%3A0xc6ca0ddca88a7721!2sAvotrou%2C%20Cotonou!5e0!3m2!1sfr!2sbj!4v1687632155809!5m2!1sfr!2sbj" 
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<footer>
+  <p>© 2025 BUFYMA - Tous droits réservés</p>
+</footer>
+
+<script>
+  // Formulaire simple : affiche un message sans envoyer réellement (tu peux connecter à un serveur plus tard)
+  document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Merci pour votre inscription, ' + document.getElementById('nom').value + ' !');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
